@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component renders Basic story 1`] = `
+.emotion-0 {
+  background: linear-gradient(var(--dt-theme-background), var(--dt-theme-background)) padding-box,var(--dt-colors-gradient);
+  border: 4px solid transparent;
+  border-radius: 10px;
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+}
+
+.emotion-2 {
+  color: var(--dt-theme-primary);
+  background-color: var(--dt-theme-background);
+  list-style: none;
+  padding: var(--dt-padding-xl) var(--dt-padding-xl2);
+  cursor: pointer;
+  color: var(--dt-theme-background);
+  background-color: var(--dt-theme-primary);
+}
+
+.emotion-2:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-2:last-of-type {
+  border-radius: 0 0 6px 6px;
+}
+
+.emotion-2:hover {
+  color: var(--dt-theme-background);
+  background-color: var(--dt-theme-primary);
+}
+
+.emotion-4 {
+  color: var(--dt-theme-primary);
+  background-color: var(--dt-theme-background);
+  list-style: none;
+  padding: var(--dt-padding-xl) var(--dt-padding-xl2);
+  cursor: pointer;
+}
+
+.emotion-4:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-4:last-of-type {
+  border-radius: 0 0 6px 6px;
+}
+
+.emotion-4:hover {
+  color: var(--dt-theme-background);
+  background-color: var(--dt-theme-primary);
+}
+
+<body>
+  <div>
+    <ul
+      class="emotion-0 emotion-1"
+    >
+      <li
+        class="emotion-2 emotion-3"
+      >
+        Selected List Item 1
+      </li>
+      <li
+        class="emotion-4 emotion-3"
+      >
+        Basic List Item 2
+      </li>
+      <li
+        class="emotion-4 emotion-3"
+      >
+        Basic List Item 3
+      </li>
+    </ul>
+  </div>
+</body>
+`;

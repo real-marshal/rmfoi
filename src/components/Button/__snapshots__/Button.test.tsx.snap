@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component renders Basic story 1`] = `
+.emotion-0 {
+  background: var(--dt-colors-gradient);
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+<body>
+  <div>
+    <button
+      class="emotion-0 emotion-1"
+    >
+      Button
+    </button>
+  </div>
+</body>
+`;

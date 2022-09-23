@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeSwitcher component opens the menu to choose a theme when the button is clicked 1`] = `
+.emotion-0 {
+  color: var(--dt-theme-primary);
+  border: 2px solid var(--dt-theme-primary);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  background: var(--dt-theme-background);
+  padding: 8px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.emotion-0:hover {
+  background: var(--dt-theme-primary);
+  color: var(--dt-theme-background);
+}
+
+.emotion-2 {
+  background: linear-gradient(var(--dt-theme-background), var(--dt-theme-background)) padding-box,var(--dt-colors-gradient);
+  border: 4px solid transparent;
+  border-radius: 10px;
+  padding: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+}
+
+.emotion-4 {
+  color: var(--dt-theme-primary);
+  background-color: var(--dt-theme-background);
+  list-style: none;
+  padding: var(--dt-padding-xl) var(--dt-padding-xl2);
+  cursor: pointer;
+  color: var(--dt-theme-background);
+  background-color: var(--dt-theme-primary);
+}
+
+.emotion-4:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-4:last-of-type {
+  border-radius: 0 0 6px 6px;
+}
+
+.emotion-4:hover {
+  color: var(--dt-theme-background);
+  background-color: var(--dt-theme-primary);
+}
+
+.emotion-6 {
+  color: var(--dt-theme-primary);
+  background-color: var(--dt-theme-background);
+  list-style: none;
+  padding: var(--dt-padding-xl) var(--dt-padding-xl2);
+  cursor: pointer;
+}
+
+.emotion-6:first-of-type {
+  border-radius: 6px 6px 0 0;
+}
+
+.emotion-6:last-of-type {
+  border-radius: 0 0 6px 6px;
+}
+
+.emotion-6:hover {
+  color: var(--dt-theme-background);
+  background-color: var(--dt-theme-primary);
+}
+
+<body>
+  <div>
+    <div>
+      <button
+        class="emotion-0 emotion-1"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </svg>
+      </button>
+      <ul
+        class="emotion-2 emotion-3"
+      >
+        <li
+          class="emotion-4 emotion-5"
+          value="system"
+        >
+          System
+        </li>
+        <li
+          class="emotion-6 emotion-5"
+          value="light"
+        >
+          Light
+        </li>
+        <li
+          class="emotion-6 emotion-5"
+          value="dark"
+        >
+          Dark
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ThemeSwitcher component renders the button to change theme 1`] = `
+.emotion-0 {
+  color: var(--dt-theme-primary);
+  border: 2px solid var(--dt-theme-primary);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+  background: var(--dt-theme-background);
+  padding: 8px;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.emotion-0:hover {
+  background: var(--dt-theme-primary);
+  color: var(--dt-theme-background);
+}
+
+<body>
+  <div>
+    <div>
+      <button
+        class="emotion-0 emotion-1"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+`;

@@ -1,0 +1,23 @@
+name: Tests
+on:
+  push:
+env:
+  node-version: 18.7.0
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.node-version }}
+      - uses: ./.github/actions/yarn-cache
+      - name: Install modules
+        run: yarn --immutable
+      - name: Run linter
+        run: yarn lint:nocache
+      - name: Run formatter
+        run: yarn format
+      - name: Run tests
+        # Standard GitHub Linux runners have 2-core CPUs at the moment
+        run: yarn test:coverage --maxWorkers=2

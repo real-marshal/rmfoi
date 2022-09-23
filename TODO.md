@@ -1,0 +1,2 @@
+- Use prettier with cache once it's fixed https://github.com/prettier/prettier/pull/13016
+- Use prettier cache-location option once they release https://github.com/prettier/prettier/pull/13019 https://github.com/prettier/prettier/issues/13032

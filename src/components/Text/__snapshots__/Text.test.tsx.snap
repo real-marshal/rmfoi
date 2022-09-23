@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text component renders Basic story 1`] = `
+.emotion-0 {
+  color: var(--dt-theme-primary);
+  font-size: var(--dt-fontSize-md);
+}
+
+<body>
+  <div>
+    <span
+      class="emotion-0 emotion-1"
+    >
+      Basic text
+    </span>
+  </div>
+</body>
+`;
