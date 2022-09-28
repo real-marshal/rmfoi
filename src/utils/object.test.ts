@@ -1,41 +1,41 @@
-import { flattenObj, isObject, traverseObj } from './collection'
+import { flattenObj, isObject, traverseObj } from './object'
 
 describe('isObject', () => {
   it('should return true if an object is passed', () => {
-    expect(isObject({ a: 1 })).toBe(true)
+    expect(isObject({ a: 1 })).toBeTrue()
   })
 
   it('should return true if an empty object is passed', () => {
-    expect(isObject({})).toBe(true)
+    expect(isObject({})).toBeTrue()
   })
 
   it('should return false if an array is passed', () => {
-    expect(isObject([1, 2])).toBe(false)
+    expect(isObject([1, 2])).toBeFalse()
   })
 
   it('should return false if null is passed', () => {
-    expect(isObject(null)).toBe(false)
+    expect(isObject(null)).toBeFalse()
   })
 
   it('should return false if undefined is passed', () => {
     // eslint-disable-next-line no-undefined, unicorn/no-useless-undefined
-    expect(isObject(undefined)).toBe(false)
+    expect(isObject(undefined)).toBeFalse()
   })
 
   it('should return false if a number is passed', () => {
-    expect(isObject(4)).toBe(false)
+    expect(isObject(4)).toBeFalse()
   })
 
   it('should return false if a string is passed', () => {
-    expect(isObject('test')).toBe(false)
+    expect(isObject('test')).toBeFalse()
   })
 
   it('should return false if a boolean is passed', () => {
-    expect(isObject(false)).toBe(false)
+    expect(isObject(false)).toBeFalse()
   })
 
   it('should return false if an arrow function is passed', () => {
-    expect(isObject(() => null)).toBe(false)
+    expect(isObject(() => null)).toBeFalse()
   })
 
   it('should return false if an anonymous function is passed', () => {
@@ -44,7 +44,7 @@ describe('isObject', () => {
       isObject(function () {
         return null
       })
-    ).toBe(false)
+    ).toBeFalse()
   })
 
   it('should return false if a function is passed', () => {
@@ -52,7 +52,7 @@ describe('isObject', () => {
     function someFunction() {
       return null
     }
-    expect(isObject(someFunction)).toBe(false)
+    expect(isObject(someFunction)).toBeFalse()
   })
 })
 
@@ -134,7 +134,7 @@ describe('traverseObj', () => {
 
     const output = traverseObj(input, mockFn)
 
-    expect(mockFn.mock.calls[0]).toBeUndefined()
+    expect(mockFn).not.toHaveBeenCalled()
 
     expect(input).toEqual(output)
   })

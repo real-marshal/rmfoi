@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmojiSlotMachine component renders Basic story 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 10px;
+}
+
+.emotion-4 {
+  position: absolute;
+  width: 110%;
+  height: 60px;
+  top: calc(50% - 30px);
+  left: -5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px var(--dt-theme-primary);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.emotion-6 {
+  padding: 0 10px;
+  border: 2px solid var(--dt-theme-primary);
+  border-radius: 10px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.emotion-8 {
+  font-size: 2rem;
+  height: 40px;
+}
+
+.emotion-48 {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #df451b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+.emotion-48:hover {
+  background: #df2222;
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <div
+          class="emotion-4 emotion-5"
+        >
+          <span />
+        </div>
+        <div
+          class="esm__column emotion-6 emotion-7"
+        >
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            👑
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            👑
+          </div>
+        </div>
+        <div
+          class="esm__column emotion-6 emotion-7"
+        >
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            👑
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            👑
+          </div>
+        </div>
+        <div
+          class="esm__column emotion-6 emotion-7"
+        >
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            👑
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-8 emotion-9"
+          >
+            👑
+          </div>
+        </div>
+      </div>
+      <button
+        class="emotion-48 emotion-49"
+      >
+        Pull
+      </button>
+    </div>
+  </div>
+</body>
+`;

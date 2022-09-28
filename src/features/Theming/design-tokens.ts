@@ -26,6 +26,9 @@ export const dtValues = {
     light: '#F5F9DF',
     gradient: 'linear-gradient(45deg, #09183d, #32bdc4)',
   },
+  screen: {
+    big: 'only screen and (min-width: 1200px)',
+  },
 }
 
 export const dt = designTokensToCSSVarNames({ ...dtValues, theme: light })

@@ -13,6 +13,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
+  setupFilesAfterEnv: ['jest-extended/all'],
   slowTestThreshold: 5,
   verbose: true,
 }

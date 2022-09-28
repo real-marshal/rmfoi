@@ -26,6 +26,8 @@ module.exports = () => ({
     }),
     new DotEnv(),
     new ForkTsCheckerWebpackPlugin({
+      // Don't show full screen overlay with errors in dev mode
+      devServer: false,
       // Required for incremental type checking
       typescript: {
         build: true,
@@ -52,5 +54,8 @@ module.exports = () => ({
     buildDependencies: {
       config: [path.resolve(__dirname, '../webpack.config.js')],
     },
+  },
+  experiments: {
+    topLevelAwait: true,
   },
 })

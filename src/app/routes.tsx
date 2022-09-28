@@ -9,6 +9,7 @@ export const Routes = () =>
       children: [
         {
           index: true,
+          element: null,
         },
         {
           path: '/projects',

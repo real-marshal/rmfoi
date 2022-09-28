@@ -2,6 +2,8 @@ import { Global } from '@emotion/react'
 import { CSSVariables } from '../src/features/Theming'
 import { useEffect } from 'react'
 import { MemoryRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from '../src/app/store'
 
 import 'modern-normalize'
 
@@ -38,7 +40,15 @@ const withRouter = (StoryFn) => {
   )
 }
 
-export const decorators = [withTheme, withRouter]
+const withProvider = (StoryFn) => {
+  return (
+    <Provider store={store}>
+      <StoryFn />
+    </Provider>
+  )
+}
+
+export const decorators = [withTheme, withRouter, withProvider]
 
 export const globalTypes = {
   theme: {

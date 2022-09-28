@@ -23,11 +23,18 @@ const disabledCommonRules = [
   'multiline-comment-style',
   'max-lines-per-function',
   'no-ternary',
+  'no-plusplus',
   'id-length',
   'capitalized-comments',
   'no-warning-comments',
   'consistent-return',
   'max-statements',
+  'no-magic-numbers',
+  'no-shadow',
+  'lines-between-class-members',
+  'init-declarations',
+  'max-params',
+  'sort-vars',
   'unicorn/prefer-module',
   'unicorn/no-null',
   'unicorn/no-document-cookie',
@@ -40,22 +47,29 @@ const disabledCommonRules = [
   'unicorn/no-array-callback-reference',
   'unicorn/prefer-object-from-entries',
   'unicorn/prevent-abbreviations',
+  'unicorn/no-new-array',
+  'unicorn/no-await-expression-member',
+  'unicorn/consistent-function-scoping',
 ]
 
 const commonRules = {
   ...disabledCommonRules.reduce((result, rule) => ({ ...result, [rule]: 'off' }), {}),
+  'no-unused-expressions': ['error', { allowShortCircuit: true }],
 }
 
 const disabledTSReactRules = [
   'react/jsx-uses-react',
   'react/react-in-jsx-scope',
   'react/no-unescaped-entities',
+  '@typescript-eslint/no-non-null-assertion',
+  '@typescript-eslint/non-nullable-type-assertion-style',
 ]
 
 const TSReactRules = {
   ...disabledTSReactRules.reduce((result, rule) => ({ ...result, [rule]: 'off' }), {}),
-  '@typescript-eslint/array-type': ['warn', { default: 'array-simple' }],
+  '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
   'react/no-unknown-property': ['error', { ignore: ['css'] }],
+  '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
 }
 
 module.exports = {
@@ -112,14 +126,16 @@ module.exports = {
         'plugin:jest/recommended',
         'plugin:jest/style',
         'plugin:testing-library/react',
+        'plugin:jest-extended/all',
       ],
       plugins: ['react', '@typescript-eslint', 'jest', 'testing-library'],
       parser: '@typescript-eslint/parser',
       parserOptions: TSParserOptions,
       rules: {
         ...TSReactRules,
-        'no-magic-numbers': 'off',
         '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/dot-notation': 'off',
       },
     },
   ],

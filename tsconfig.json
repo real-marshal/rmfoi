@@ -18,7 +18,7 @@
     },
     "types": ["@emotion/react/types/css-prop", "jest"],
     "outDir": "./.cache/ts",
-    "lib": ["ESNext", "DOM", "WebWorker"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
     "module": "ESNext",
     "moduleResolution": "node",
     "target": "ESNext",
