@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlotMachine component renders Basic story 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: var(--dt-gap-sm);
+  border: 4px solid var(--dt-theme-primary);
+  padding: var(--dt-padding-lg);
+  border-radius: 10px;
+  background: linear-gradient(100deg, #0095ff 50%, #1457a9 100%);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.emotion-4 {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.emotion-6 {
+  text-transform: uppercase;
+  color: white;
+}
+
+.emotion-6::after {
+  content: ': ';
+}
+
+.emotion-8 {
+  color: #b1e9ff;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.emotion-44 {
+  padding: var(--dt-padding-sm) var(--dt-padding-lg);
+  border-radius: 5px;
+  border: 2px solid var(--dt-colors-dark);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.emotion-44:hover {
+  background: #fbdc00;
+}
+
+.emotion-44:disabled {
+  cursor: default;
+  background: #aaa;
+}
+
+.emotion-46 {
+  padding: var(--dt-padding-sm) var(--dt-padding-lg);
+  border-radius: 5px;
+  border: 2px solid var(--dt-colors-dark);
+  cursor: pointer;
+  text-transform: capitalize;
+  background: #fbdc00;
+}
+
+.emotion-46:hover {
+  background: #fbdc00;
+}
+
+.emotion-46:disabled {
+  cursor: default;
+  background: #aaa;
+}
+
+.emotion-50 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: var(--dt-gap-sm);
+}
+
+.emotion-52 {
+  position: absolute;
+  width: 110%;
+  height: 90px;
+  top: calc(50% - 45px);
+  left: -5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px var(--dt-colors-dark);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.emotion-54 {
+  padding: 0 var(--dt-padding-lg);
+  border: 2px solid var(--dt-colors-dark);
+  border-radius: 10px;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #777 2%, white 20%, white 80%, #777 98%);
+}
+
+.emotion-56 {
+  font-size: 3rem;
+  height: 60px;
+}
+
+.emotion-96 {
+  text-transform: uppercase;
+  font-weight: bold;
+  background: #df451b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 60px;
+  font-size: 1.2rem;
+  border: 2px solid var(--dt-colors-dark);
+}
+
+.emotion-96:hover {
+  background: #df2222;
+}
+
+.emotion-96:disabled {
+  cursor: default;
+  background: #aaa;
+}
+
+.emotion-98 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-100 {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: var(--dt-margin-lg);
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <span
+          class="emotion-4 emotion-5"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            Pulls
+          </span>
+          <span
+            class="emotion-8 emotion-9"
+          >
+            0
+          </span>
+        </span>
+        <span
+          class="emotion-4 emotion-5"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            Wins
+          </span>
+          <span
+            class="emotion-8 emotion-9"
+          >
+            0
+          </span>
+        </span>
+        <span
+          class="emotion-4 emotion-5"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            Loses
+          </span>
+          <span
+            class="emotion-8 emotion-9"
+          >
+            0
+          </span>
+        </span>
+        <span
+          class="emotion-4 emotion-5"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            WR
+          </span>
+          <span
+            class="emotion-8 emotion-9"
+          >
+            0
+            %
+          </span>
+        </span>
+      </div>
+      <div
+        class="emotion-2 emotion-3"
+      >
+        <span
+          class="emotion-4 emotion-5"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            Chance
+          </span>
+          <span
+            class="emotion-8 emotion-9"
+          >
+            20
+          </span>
+        </span>
+        <span
+          class="emotion-4 emotion-5"
+        >
+          <span
+            class="emotion-6 emotion-7"
+          >
+            Chance+
+          </span>
+          <span
+            class="emotion-8 emotion-9"
+          >
+            5
+          </span>
+        </span>
+      </div>
+      <div
+        class="emotion-42 emotion-43"
+      >
+        <button
+          class="emotion-44 emotion-45"
+        >
+          easy
+        </button>
+        <button
+          class="emotion-46 emotion-45"
+        >
+          standard
+        </button>
+        <button
+          class="emotion-44 emotion-45"
+        >
+          hard
+        </button>
+      </div>
+      <div
+        class="emotion-50 emotion-51"
+      >
+        <div
+          class="emotion-52 emotion-53"
+        >
+          <span />
+        </div>
+        <div
+          class="esm__column emotion-54 emotion-55"
+        >
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            👑
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            👑
+          </div>
+        </div>
+        <div
+          class="esm__column emotion-54 emotion-55"
+        >
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            👑
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            👑
+          </div>
+        </div>
+        <div
+          class="esm__column emotion-54 emotion-55"
+        >
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            👑
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            🚀
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            💎
+          </div>
+          <div
+            class="esm__emoji emotion-56 emotion-57"
+          >
+            👑
+          </div>
+        </div>
+      </div>
+      <button
+        class="emotion-96 emotion-97"
+      >
+        Pull
+      </button>
+      <div
+        class="emotion-98 emotion-99"
+      >
+        <span
+          class="emotion-100 emotion-101"
+        >
+          0
+           emojis won, 
+          26
+           left
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+`;

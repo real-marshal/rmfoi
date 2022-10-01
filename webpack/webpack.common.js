@@ -38,7 +38,7 @@ module.exports = () => ({
   module: {
     rules: [
       {
-        test: /\.(?:png|jpe?g|svg|woff2?)$/,
+        test: /\.(?:png|jpe?g|svg|webm|mp4|woff2?)$/,
         type: 'asset',
       },
       {

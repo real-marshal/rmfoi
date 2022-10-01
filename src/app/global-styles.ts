@@ -30,5 +30,9 @@ export const globalStyles = css`
 
   body {
     margin: 0;
+
+    a {
+      text-decoration: none;
+    }
   }
 `

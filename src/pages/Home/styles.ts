@@ -1,4 +1,4 @@
-import { dt, ThemeSwitcher } from '@/features/Theming'
+import { dt, dtValues, ThemeSwitcher } from '@/features/Theming'
 import styled from '@emotion/styled'
 import wavesMobile from '@/assets/waves-mobile.svg'
 import { NavLink } from 'react-router-dom'
@@ -7,7 +7,7 @@ export const Container = styled.div`
   background: ${dt.theme.background};
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: ${dt.gap.lg};
 `
 
 export const Header = styled.div`
@@ -17,7 +17,7 @@ export const Header = styled.div`
 `
 
 export const LogoWrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   background: ${dt.colors.dark};
   display: flex;
@@ -26,7 +26,7 @@ export const LogoWrapper = styled.div`
   &::after {
     content: url(${wavesMobile});
     display: block;
-    width: 100vw;
+    width: 100%;
     background: ${dt.theme.background};
   }
 `
@@ -65,7 +65,7 @@ export const StyledThemeSwitcher = styled(ThemeSwitcher)`
 export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: ${dt.gap.lg};
   align-items: center;
 `
 
@@ -99,9 +99,11 @@ export const Footer = styled.footer`
 
   &::before {
     content: url(${wavesMobile});
+    // Fix stupid border when this is transformed in chrome (isn't everything supposed to work in chrome lol?)
+    will-change: transform;
     transform: rotate(180deg) scaleX(140%);
     display: block;
-    width: 100vw;
+    width: 100%;
     background: ${dt.theme.background};
   }
 `
@@ -118,7 +120,7 @@ export const FooterText = styled.p`
 `
 
 export const Main = styled.main`
-  @media ${dt.screen.big} {
+  @media ${dtValues.mq.big} {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 100px;

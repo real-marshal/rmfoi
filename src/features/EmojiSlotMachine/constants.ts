@@ -35,9 +35,9 @@ export const MIN_CHANCE = 1
 export const MAX_CHANCE = 100
 
 export enum EmojiSlotMachineMode {
-  EASY,
-  STANDARD,
-  HARD,
+  EASY = 'easy',
+  STANDARD = 'standard',
+  HARD = 'hard',
 }
 
 export const modeData = {
@@ -55,4 +55,4 @@ export const modeData = {
   },
 } as const
 
-export const loseMessages = ['loser', 'meh', 'rekt', 'lost again?', 'fail']
+export const loseMessages = ['loser', 'meh', 'rekt', 'lost again?', 'fail'] as const

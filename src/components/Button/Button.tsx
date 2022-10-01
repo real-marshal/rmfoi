@@ -8,8 +8,8 @@ interface ButtonProps {
 }
 
 const StyledButton = styled.button`
-  background: ${dt.colors.gradient};
-  padding: ${dt.padding.lg} ${dt.padding.xl};
+  background: ${dt.theme.gradientBlue};
+  padding: ${dt.padding.md} ${dt.padding.lg};
   border: none;
   border-radius: 10px;
   cursor: pointer;

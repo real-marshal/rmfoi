@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component renders Basic story 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  color: var(--dt-theme-primary);
+  background-color: var(--dt-theme-background);
+  border: 3px solid var(--dt-theme-primary);
+  border-radius: 10px;
+}
+
+.emotion-0>:not(img, a) {
+  padding: var(--dt-padding-lg);
+}
+
+.emotion-3 {
+  font-family: monospace;
+  font-weight: regular;
+  color: var(--dt-theme-primary);
+  margin: 0;
+  padding: var(--dt-padding-lg);
+  background: var(--dt-theme-gradientGreenBlue);
+  border-radius: 10px 10px 0 0;
+  border-bottom: 3px solid var(--dt-theme-primary);
+  font-size: 1.25rem;
+}
+
+.emotion-5 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.emotion-7 {
+  width: 100%;
+  border-radius: 10px;
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <h3
+        class="emotion-2 emotion-3 emotion-4"
+      >
+        Card heading
+      </h3>
+      <p
+        class="emotion-5 emotion-6"
+      >
+        This is the description of the content that this card is supposed to encapsulate
+      </p>
+      <img
+        alt="Card heading overview"
+        class="emotion-7 emotion-8"
+        src="file-mock"
+      />
+    </div>
+  </div>
+</body>
+`;

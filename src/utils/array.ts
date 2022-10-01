@@ -10,4 +10,4 @@ export const shuffle = <T>(arr: T[]) => {
   return arr
 }
 
-export const pickRandom = <T>(arr: T[]) => arr[randomInt(0, arr.length - 1)]
+export const pickRandom = <T>(arr: readonly T[]) => arr[randomInt(0, arr.length - 1)] as T

@@ -11,12 +11,14 @@ interface ListProps {
 
 const StyledUL = styled.ul<Pick<ListProps, 'align'>>`
   background: linear-gradient(${dt.theme.background}, ${dt.theme.background}) padding-box,
-    ${dt.colors.gradient};
+    ${dt.theme.gradientBlue};
   border: 4px solid transparent;
   border-radius: 10px;
+  z-index: ${dt.z.menu};
   padding: 0;
   width: fit-content;
   position: absolute;
+
   ${({ align }) =>
     align === 'right' &&
     css`

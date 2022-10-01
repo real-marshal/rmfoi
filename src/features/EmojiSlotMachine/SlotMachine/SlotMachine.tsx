@@ -3,16 +3,28 @@ import {
   actions,
   evaluateNewPull,
   selectEmojiArrays,
+  selectMode,
   useCurrentDispatch,
   useCurrentSelector,
-} from './store'
+} from '../store'
 import { useSlotMachineAnimation } from './useSlotMachineAnimation'
-import { Emoji, emojis, emojisMap, loseMessages } from './constants'
+import { Emoji, emojis, EmojiSlotMachineMode, emojisMap, loseMessages } from '../constants'
 import { pickRandom } from '@/utils'
-import { CenterRowOverlay, Column, Columns, EmojiElement, PullButton, Wrapper } from './styles'
+import {
+  CenterRowOverlay,
+  Column,
+  Columns,
+  EmojiElement,
+  ModeButton,
+  ModesContainer,
+  PullButton,
+  Wrapper,
+} from './styles'
+import { GeneralStatistics } from '../GeneralStatistics'
+import { EmojiStatistics } from '../EmojiStatistics'
 
-interface EmojiSlotMachineProps {
-  elementsInColumn: number
+interface SlotMachineProps {
+  elementsInColumn?: number
 }
 
 interface WonPullState {
@@ -20,16 +32,22 @@ interface WonPullState {
   wonEmoji: Emoji
 }
 
-interface OtherPullState {
-  status: 'pending' | 'lost'
+interface LostPullState {
+  status: 'lost'
+  message: string
 }
 
-type PullState = WonPullState | OtherPullState
+interface OtherPullState {
+  status: 'pending'
+}
 
-const EmojiSlotMachine = ({ elementsInColumn = 5 }: EmojiSlotMachineProps) => {
+type PullState = WonPullState | LostPullState | OtherPullState
+
+const SlotMachine = ({ elementsInColumn = 5 }: SlotMachineProps) => {
   const ref = useRef<HTMLDivElement>(null)
 
   const originalEmojiArrays = useCurrentSelector(selectEmojiArrays)
+  const mode = useCurrentSelector(selectMode)
 
   const [pullState, setPullState] = useState<PullState>({ status: 'pending' })
 
@@ -62,16 +80,31 @@ const EmojiSlotMachine = ({ elementsInColumn = 5 }: EmojiSlotMachineProps) => {
 
     await startAnimation(wonEmojiIndexes)
 
-    setPullState(wonEmoji ? { status: 'won', wonEmoji } : { status: 'lost' })
+    setPullState(
+      wonEmoji ? { status: 'won', wonEmoji } : { status: 'lost', message: pickRandom(loseMessages) }
+    )
   }
 
   return (
     <Wrapper>
+      <GeneralStatistics isBusy={isBusy} />
+      <ModesContainer>
+        {Object.values(EmojiSlotMachineMode).map((modeKey) => (
+          <ModeButton
+            key={modeKey}
+            disabled={isBusy}
+            selected={mode === modeKey}
+            onClick={() => dispatch(actions.updateMode(modeKey))}
+          >
+            {modeKey}
+          </ModeButton>
+        ))}
+      </ModesContainer>
       <Columns ref={ref}>
         <CenterRowOverlay pullState={pullState}>
           <span>
             {pullState.status === 'won' && emojisMap[pullState.wonEmoji]}
-            {pullState.status === 'lost' && pickRandom(loseMessages)}
+            {pullState.status === 'lost' && pullState.message}
           </span>
         </CenterRowOverlay>
         {emojiArrays.map((shuffledEmojis, ind) => (
@@ -85,11 +118,12 @@ const EmojiSlotMachine = ({ elementsInColumn = 5 }: EmojiSlotMachineProps) => {
         ))}
       </Columns>
       <PullButton onClick={pullClickHandler} disabled={isBusy}>
-        Pull
+        {isBusy ? '...' : 'Pull'}
       </PullButton>
+      <EmojiStatistics isBusy={isBusy} />
     </Wrapper>
   )
 }
 
-export { EmojiSlotMachine }
-export type { EmojiSlotMachineProps, PullState }
+export { SlotMachine }
+export type { SlotMachineProps, PullState }

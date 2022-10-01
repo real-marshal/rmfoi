@@ -2,11 +2,11 @@ import store from '@/app/store'
 import { composeStories } from '@storybook/react'
 import { render } from '@testing-library/react'
 import { Provider } from 'react-redux'
-import * as stories from './EmojiSlotMachine.stories'
+import * as stories from './SlotMachine.stories'
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-jest.mock('./store', () => ({
-  ...jest.requireActual('./store'),
+jest.mock('../store', () => ({
+  ...jest.requireActual('../store'),
   selectEmojiArrays: () => [
     ['🚀', '💎', '👑'],
     ['🚀', '💎', '👑'],
@@ -14,7 +14,7 @@ jest.mock('./store', () => ({
   ],
 }))
 
-describe('EmojiSlotMachine component', () => {
+describe('SlotMachine component', () => {
   const testStories = Object.values(composeStories(stories)).map(
     (Story) => [Story.storyName, Story] as [string, typeof Story]
   )

@@ -106,6 +106,7 @@ module.exports = {
         'jest.config.js',
         'commitlint.config.js',
         'release.config.js',
+        'fileMock.js',
       ],
       env: { node: true },
     },

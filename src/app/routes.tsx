@@ -1,5 +1,5 @@
 import { useRoutes } from 'react-router-dom'
-import { Home, About, Projects, Articles } from '@/pages'
+import { Home, About, Projects, Articles, EmojiSlotMachinePage } from '@/pages'
 
 export const Routes = () =>
   useRoutes([
@@ -12,15 +12,24 @@ export const Routes = () =>
           element: null,
         },
         {
-          path: '/projects',
-          element: <Projects />,
+          path: 'projects',
+          children: [
+            {
+              index: true,
+              element: <Projects />,
+            },
+            {
+              path: 'emoji-slot-machine',
+              element: <EmojiSlotMachinePage />,
+            },
+          ],
         },
         {
-          path: '/articles',
+          path: 'articles',
           element: <Articles />,
         },
         {
-          path: '/about',
+          path: 'about',
           element: <About />,
         },
       ],

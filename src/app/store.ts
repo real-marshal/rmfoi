@@ -10,6 +10,7 @@ import {
 import type { ThunkMiddlewareFor } from '@reduxjs/toolkit/dist/getDefaultMiddleware'
 import type { ExtractDispatchExtensions } from '@reduxjs/toolkit/dist/tsHelpers'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
+import { FLUSH, PAUSE, PERSIST, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 
 const staticReducers = {
   theme: themeReducer,
@@ -17,7 +18,15 @@ const staticReducers = {
 
 const store = configureStore({
   reducer: staticReducers,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 })
+
+const persistor = persistStore(store)
 
 const asyncReducers: Record<string, Reducer> = {}
 
@@ -33,6 +42,8 @@ store.injectReducer = (key: string, asyncReducer: Reducer) => {
 }
 
 export default store
+
+export { persistor }
 
 // Types for global synchronous store
 export type RootState = ReturnType<typeof store.getState>

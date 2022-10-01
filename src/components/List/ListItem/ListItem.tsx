@@ -12,15 +12,15 @@ const StyledLI = styled.li<ListItemProps>`
   color: ${dt.theme.primary};
   background-color: ${dt.theme.background};
   list-style: none;
-  padding: ${dt.padding.xl} ${dt.padding.xl2};
+  padding: ${dt.padding.lg} ${dt.padding.xl};
   cursor: pointer;
 
   &:first-of-type {
-    border-radius: 6px 6px 0 0;
+    border-radius: 7px 7px 0 0;
   }
 
   &:last-of-type {
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 7px 7px;
   }
 
   &:hover {

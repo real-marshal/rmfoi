@@ -1,5 +1,5 @@
 import store, { MakeCurrentDispatch, MakeCurrentState, MakeCurrentThunk } from '@/app/store'
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { Emoji, emojis, EmojiSlotMachineMode, modeData } from './constants'
 import { getShuffledEmojiArrays, getWonEmojiIndexes, EmojiSwapData, tryToWin } from './utils'
@@ -163,3 +163,33 @@ export const selectMode = (state: CurrentRootState) => state[NAME].mode
 export const selectChance = (state: CurrentRootState) => state[NAME].chance
 
 export const selectChanceIncrement = (state: CurrentRootState) => state[NAME].chanceIncrement
+
+export const selectStats = (state: CurrentRootState) => state[NAME].stats
+
+export const selectGeneralStats = createSelector(
+  selectStats,
+  selectChance,
+  selectChanceIncrement,
+  ({ pulls, wonEmojis }, chance, chanceIncrement) => {
+    const wins = Object.values(wonEmojis).reduce((result, wins) => result + wins, 0)
+
+    return {
+      pulls,
+      wins,
+      loses: pulls - wins,
+      WR: pulls ? wins / pulls : 0,
+      chance,
+      chanceIncrement,
+    }
+  }
+)
+
+export const selectdEmojiStats = createSelector(selectStats, ({ wonEmojis }) => {
+  const wonEmojisNumber = Object.keys(wonEmojis).length
+
+  return {
+    wonEmojisNumber,
+    leftEmojis: emojis.length - wonEmojisNumber,
+    wonEmojis,
+  }
+})

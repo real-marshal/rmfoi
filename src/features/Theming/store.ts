@@ -1,17 +1,56 @@
 import type { RootState } from '@/app/store'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { ThemeValue } from './types'
+import { SystemThemeValue, SYSTEM_THEME_FALLBACK, ThemeValue } from './constants'
+import storage from 'redux-persist/lib/storage'
+import { persistReducer } from 'redux-persist'
 
-const initialState = ThemeValue.SYSTEM as ThemeValue
+const NAME = 'theme' as const
+interface ThemeState {
+  currentTheme: ThemeValue
+  systemTheme: SystemThemeValue
+}
 
-const themeSlice = createSlice({
-  name: 'theme',
+const initialState: ThemeState = {
+  currentTheme: ThemeValue.SYSTEM,
+  systemTheme: SYSTEM_THEME_FALLBACK,
+}
+
+const persistConfig = {
+  key: NAME,
+  storage,
+} as const
+
+/*
+
+REDUCERS
+
+*/
+
+const { actions, reducer } = createSlice({
+  name: NAME,
   initialState,
   reducers: {
-    setTheme: (_, action: PayloadAction<ThemeValue>) => action.payload,
+    setCurrentTheme: (state, action: PayloadAction<ThemeValue>) => {
+      state.currentTheme = action.payload
+    },
+    setSystemTheme: (state, action: PayloadAction<SystemThemeValue>) => {
+      state.systemTheme = action.payload
+    },
   },
 })
 
-export const { reducer: themeReducer, actions } = themeSlice
+export { actions, reducer }
+export const themeReducer = persistReducer(persistConfig, reducer)
 
-export const selectTheme = (state: RootState) => state.theme
+/*
+
+SELECTORS
+
+*/
+
+export const selectCurrentTheme = (state: RootState) => state.theme.currentTheme
+
+export const selectActualTheme = (state: RootState) =>
+  state.theme.currentTheme === ThemeValue.SYSTEM
+    ? state.theme.systemTheme
+    : state.theme.currentTheme

@@ -3,11 +3,11 @@ import { designTokensToCSSVarNames } from './utils'
 
 export const dtValues = {
   padding: {
-    sm: '0.125rem',
-    md: '0.25rem',
-    lg: '0.5rem',
-    xl: '1rem',
-    xl2: '2rem',
+    xs: '0.125rem',
+    sm: '0.25rem',
+    md: '0.5rem',
+    lg: '1rem',
+    xl: '2rem',
   },
   margin: {
     sm: '2px',
@@ -15,6 +15,13 @@ export const dtValues = {
     lg: '8px',
     xl: '16px',
     xl2: '32px',
+  },
+  gap: {
+    sm: '10px',
+    md: '20px',
+    lg: '40px',
+    xl: '80px',
+    xl2: '160px',
   },
   fontSize: {
     sm: '0.75rem',
@@ -24,11 +31,15 @@ export const dtValues = {
   colors: {
     dark: '#010109',
     light: '#F5F9DF',
-    gradient: 'linear-gradient(45deg, #09183d, #32bdc4)',
   },
-  screen: {
+  mq: {
     big: 'only screen and (min-width: 1200px)',
   },
-}
+  z: {
+    menu: '1000',
+  },
+} as const
 
+// Note that the types of this object are not actually true - this object contains CSS var names
+// but I like to see the actual values instead
 export const dt = designTokensToCSSVarNames({ ...dtValues, theme: light })

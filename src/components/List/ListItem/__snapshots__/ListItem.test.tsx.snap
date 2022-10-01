@@ -5,16 +5,16 @@ exports[`ListItem component renders Basic story 1`] = `
   color: var(--dt-theme-primary);
   background-color: var(--dt-theme-background);
   list-style: none;
-  padding: var(--dt-padding-xl) var(--dt-padding-xl2);
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
   cursor: pointer;
 }
 
 .emotion-0:first-of-type {
-  border-radius: 6px 6px 0 0;
+  border-radius: 7px 7px 0 0;
 }
 
 .emotion-0:last-of-type {
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 7px 7px;
 }
 
 .emotion-0:hover {
@@ -38,18 +38,18 @@ exports[`ListItem component renders Selected story 1`] = `
   color: var(--dt-theme-primary);
   background-color: var(--dt-theme-background);
   list-style: none;
-  padding: var(--dt-padding-xl) var(--dt-padding-xl2);
+  padding: var(--dt-padding-lg) var(--dt-padding-xl);
   cursor: pointer;
   color: var(--dt-theme-background);
   background-color: var(--dt-theme-primary);
 }
 
 .emotion-0:first-of-type {
-  border-radius: 6px 6px 0 0;
+  border-radius: 7px 7px 0 0;
 }
 
 .emotion-0:last-of-type {
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 7px 7px;
 }
 
 .emotion-0:hover {

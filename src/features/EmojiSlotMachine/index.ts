@@ -1,2 +1,2 @@
-export { EmojiSlotMachine } from './EmojiSlotMachine'
-export type { EmojiSlotMachineProps } from './EmojiSlotMachine'
+export { SlotMachine as EmojiSlotMachine } from './SlotMachine'
+export type { SlotMachineProps as EmojiSlotMachineProps } from './SlotMachine'

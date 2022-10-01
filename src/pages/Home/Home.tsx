@@ -1,5 +1,5 @@
 import logo from '@/assets/logo.svg'
-import { Outlet, useMatch, useNavigate } from 'react-router-dom'
+import { Link, Outlet, useMatch, useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@/hooks'
 import { useEffect } from 'react'
 import {
@@ -16,7 +16,7 @@ import {
   Footer,
   FooterText,
 } from './styles'
-import { dt } from '@/features/Theming'
+import { dtValues } from '@/features/Theming'
 
 const navItems = [
   {
@@ -34,14 +34,15 @@ const navItems = [
 ] as const
 
 const Home = () => {
-  const isBigScreen = useMediaQuery(dt.screen.big)
+  const isBigScreen = useMediaQuery(dtValues.mq.big)
+
   const isRoot = useMatch('/')
 
   const navigate = useNavigate()
 
   useEffect(() => {
     if (isBigScreen && isRoot) {
-      navigate('/projects')
+      navigate('projects')
     }
   }, [isBigScreen, isRoot, navigate])
 
@@ -59,10 +60,12 @@ const Home = () => {
     <Container>
       <Header>
         <LogoWrapper>
-          <LogoImg src={logo} alt='Logo' />
-          <LogoTitle>
-            <LogoSubtitle>RM's</LogoSubtitle>Flower of Ideas
-          </LogoTitle>
+          <Link to='/'>
+            <LogoImg src={logo} alt='Logo' />
+            <LogoTitle>
+              <LogoSubtitle>RM's</LogoSubtitle>Flower of Ideas
+            </LogoTitle>
+          </Link>
           <StyledThemeSwitcher />
         </LogoWrapper>
       </Header>
