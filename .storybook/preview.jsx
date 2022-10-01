@@ -4,7 +4,8 @@ import { useEffect } from 'react'
 import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from '../src/app/store'
-
+import { dark } from '../src/features/Theming/themes/dark'
+import { light } from '../src/features/Theming/themes/light'
 import 'modern-normalize'
 
 export const parameters = {
@@ -14,6 +15,19 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  backgrounds: {
+    default: 'light',
+    values: [
+      {
+        name: 'light',
+        value: light.background
+      },
+      {
+        name: 'dark',
+        value: dark.background,
+      },
+    ],
   },
 }
 
