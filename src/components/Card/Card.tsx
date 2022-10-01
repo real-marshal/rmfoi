@@ -60,7 +60,7 @@ const Card = ({ name, description, media, src, link }: CardProps) => {
       {link ? <Link to={link}>{heading}</Link> : heading}
       <Description>{description}</Description>
       {media === 'image' && <Image src={src} alt={`${name} overview`} />}
-      {media === 'video' && <Video src={src} autoPlay loop muted />}
+      {media === 'video' && <Video src={src} autoPlay loop muted playsInline />}
     </Container>
   )
 }
