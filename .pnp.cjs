@@ -74,6 +74,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["core-js", "npm:3.25.0"],\
             ["css-loader", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:6.7.1"],\
             ["css-minimizer-webpack-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:4.0.0"],\
+            ["dotenv-defaults", "npm:5.0.2"],\
             ["dotenv-webpack", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:8.0.1"],\
             ["eslint", "npm:8.23.0"],\
             ["eslint-config-prettier", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:8.5.0"],\
@@ -14126,6 +14127,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dotenv", [\
+        ["npm:14.3.2", {\
+          "packageLocation": "../../.yarn/berry/cache/dotenv-npm-14.3.2-08998c870b-8.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:14.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:8.6.0", {\
           "packageLocation": "../../.yarn/berry/cache/dotenv-npm-8.6.0-2ce3e9f7bb-8.zip/node_modules/dotenv/",\
           "packageDependencies": [\
@@ -14140,6 +14148,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["dotenv-defaults", "npm:2.0.2"],\
             ["dotenv", "npm:8.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.0.2", {\
+          "packageLocation": "../../.yarn/berry/cache/dotenv-defaults-npm-5.0.2-d3d07e21c8-8.zip/node_modules/dotenv-defaults/",\
+          "packageDependencies": [\
+            ["dotenv-defaults", "npm:5.0.2"],\
+            ["dotenv", "npm:14.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -24555,6 +24571,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["core-js", "npm:3.25.0"],\
             ["css-loader", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:6.7.1"],\
             ["css-minimizer-webpack-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:4.0.0"],\
+            ["dotenv-defaults", "npm:5.0.2"],\
             ["dotenv-webpack", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:8.0.1"],\
             ["eslint", "npm:8.23.0"],\
             ["eslint-config-prettier", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:8.5.0"],\

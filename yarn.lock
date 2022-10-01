@@ -9056,6 +9056,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-defaults@npm:^5.0.2":
+  version: 5.0.2
+  resolution: "dotenv-defaults@npm:5.0.2"
+  dependencies:
+    dotenv: ^14.0.0
+  checksum: a45b1c56d037f1606ce0bbc9097f42c044a22c76acf10b94c2e2506bf7cac8ab633b5b1c654217040e172f87acd1620054258b9df48120258ccb7f8352cfbbce
+  languageName: node
+  linkType: hard
+
 "dotenv-expand@npm:^5.1.0":
   version: 5.1.0
   resolution: "dotenv-expand@npm:5.1.0"
@@ -9071,6 +9080,13 @@ __metadata:
   peerDependencies:
     webpack: ^4 || ^5
   checksum: ee73eda78df90bcf7446763dfe5e518a2054ed6222783856912d2c6a255fdfc041854e125e036ff2603b06fb44f5234713fad5feecb1e66a54fe78a35a98fb87
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^14.0.0":
+  version: 14.3.2
+  resolution: "dotenv@npm:14.3.2"
+  checksum: 86c06758915d6facc35275f4a7fafc16705b6f3b44befaa8abca91367991efc8ff8db5437d3cc14778231d19fb97610fe82d60f8a53ba723cdb69fe4171439aa
   languageName: node
   linkType: hard
 
@@ -17715,6 +17731,7 @@ __metadata:
     core-js: ^3.25.0
     css-loader: ^6.7.1
     css-minimizer-webpack-plugin: ^4.0.0
+    dotenv-defaults: ^5.0.2
     dotenv-webpack: ^8.0.1
     eslint: ^8.23.0
     eslint-config-prettier: ^8.5.0

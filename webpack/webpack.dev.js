@@ -6,6 +6,7 @@ module.exports = () => ({
   devtool: 'eval-source-map',
   devServer: {
     hot: true,
+    host: process.env.DEV_HOST,
     port: 3000,
     static: './dist',
     client: {
