@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/real-marshal/rmfoi/compare/v1.0.0...v1.0.1) (2022-10-01)
+
+
+### Bug Fixes
+
+* :bug: try to fix fullscreen video on ios safari ([df187ed](https://github.com/real-marshal/rmfoi/commit/df187edb4cc2b38ad7a8a9368c398483769d1219))
+
 # 1.0.0 (2022-10-01)
 
 
