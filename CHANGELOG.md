@@ -1,3 +1,16 @@
+## [1.0.2](https://github.com/real-marshal/rmfoi/compare/v1.0.1...v1.0.2) (2022-10-03)
+
+
+### Bug Fixes
+
+* :adhesive_bandage: make slot machine speed independent of screen resolution ([b15a134](https://github.com/real-marshal/rmfoi/commit/b15a134c59272d6d09eb6d3d182a28503790228d))
+* :lipstick: fix text stroke on ios ([2ebc1d8](https://github.com/real-marshal/rmfoi/commit/2ebc1d811273e2463b8317b33d321376f7c779ab))
+
+
+### Performance Improvements
+
+* :zap: use lazy loading for emoji slot machine ([17679a1](https://github.com/real-marshal/rmfoi/commit/17679a12d6d00bcec166688c1dffbf71c9cc8b53))
+
 ## [1.0.1](https://github.com/real-marshal/rmfoi/compare/v1.0.0...v1.0.1) (2022-10-01)
 
 
