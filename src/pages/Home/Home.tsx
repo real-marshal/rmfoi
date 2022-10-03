@@ -1,7 +1,7 @@
 import logo from '@/assets/logo.svg'
 import { Link, Outlet, useMatch, useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@/hooks'
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import {
   Nav,
   StyledNavLink,
@@ -15,6 +15,7 @@ import {
   Main,
   Footer,
   FooterText,
+  Loading,
 } from './styles'
 import { dtValues } from '@/features/Theming'
 
@@ -73,12 +74,16 @@ const Home = () => {
         {isBigScreen ? (
           <>
             {navigation}
-            <Outlet />
+            <Suspense fallback={<Loading />}>
+              <Outlet />
+            </Suspense>
           </>
         ) : isRoot ? (
           navigation
         ) : (
-          <Outlet />
+          <Suspense fallback={<Loading />}>
+            <Outlet />
+          </Suspense>
         )}
       </Main>
       <Footer>

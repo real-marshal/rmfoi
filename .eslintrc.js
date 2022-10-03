@@ -35,6 +35,7 @@ const disabledCommonRules = [
   'init-declarations',
   'max-params',
   'sort-vars',
+  'no-inline-comments',
   'unicorn/prefer-module',
   'unicorn/no-null',
   'unicorn/no-document-cookie',

@@ -127,3 +127,8 @@ export const Main = styled.main`
     margin: 0 100px;
   }
 `
+
+export const Loading = styled.span`
+  color: ${dt.theme.primary};
+  font-size: 2rem;
+`

@@ -18,4 +18,4 @@ const EmojiSlotMachinePage = () => (
   </Container>
 )
 
-export { EmojiSlotMachinePage }
+export default EmojiSlotMachinePage

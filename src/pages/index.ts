@@ -1,5 +1,4 @@
 export * from './Home/Home'
 export * from './About/About'
 export * from './Projects/Projects'
-export * from './Projects/pages'
 export * from './Articles/Articles'
