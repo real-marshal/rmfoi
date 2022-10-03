@@ -1,12 +1,15 @@
 import { randomInt } from '@/utils/number'
 import { RefObject, useEffect, useState } from 'react'
 
-const MIN_COMMON_SPEED = 5
+// Required to make the scrol speed look similar on different screen resolutions
+const SPEED_COEFFICIENT = window.devicePixelRatio
 
-const commonSpeedEquation = (t: number) => 20_000 / (2 * (t + 500))
+const MIN_COMMON_SPEED = 5 * SPEED_COEFFICIENT
+
+const commonSpeedEquation = (t: number) => (20_000 / (2 * (t + 500))) * SPEED_COEFFICIENT
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const uniqueSpeedEquation = (_t: number, _distanceToTarget: number | null) => 4
+const uniqueSpeedEquation = (_t: number, _distanceToTarget: number | null) => 4 * SPEED_COEFFICIENT
 
 const getDistanceToTarget = (scrollPosition: number, targetScrollPosition: number, shift = 0) =>
   Math.abs(scrollPosition - (targetScrollPosition + shift))
