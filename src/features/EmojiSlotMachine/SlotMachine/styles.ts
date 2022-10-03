@@ -101,6 +101,8 @@ export const CenterRowOverlay = styled.div<{ pullState: PullState }>`
   text-align: center;
   font-weight: bold;
   color: #ffffff;
+  // Default fonts are variable on some platforms (iOS) which breaks -webkit-text-stroke
+  font-family: 'Helvetica';
 
   ${({ pullState }) =>
     pullState.status === 'won' &&

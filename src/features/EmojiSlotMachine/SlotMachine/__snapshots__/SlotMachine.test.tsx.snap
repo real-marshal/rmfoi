@@ -130,6 +130,7 @@ exports[`SlotMachine component renders Basic story 1`] = `
   text-align: center;
   font-weight: bold;
   color: #ffffff;
+  font-family: 'Helvetica';
 }
 
 .emotion-54 {
