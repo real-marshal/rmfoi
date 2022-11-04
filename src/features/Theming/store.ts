@@ -2,7 +2,7 @@ import type { RootState } from '@/app/store'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { SystemThemeValue, SYSTEM_THEME_FALLBACK, ThemeValue } from './constants'
 import storage from 'redux-persist/lib/storage'
-import { persistReducer } from 'redux-persist'
+import { PersistConfig, persistReducer } from 'redux-persist'
 
 const NAME = 'theme' as const
 interface ThemeState {
@@ -15,7 +15,7 @@ const initialState: ThemeState = {
   systemTheme: SYSTEM_THEME_FALLBACK,
 }
 
-const persistConfig = {
+const persistConfig: PersistConfig<ThemeState> = {
   key: NAME,
   storage,
 } as const

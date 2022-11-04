@@ -1,0 +1,1 @@
+export { IcePhotoEditor } from './IcePhotoEditor'

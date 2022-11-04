@@ -11,6 +11,19 @@ import type { ThunkMiddlewareFor } from '@reduxjs/toolkit/dist/getDefaultMiddlew
 import type { ExtractDispatchExtensions } from '@reduxjs/toolkit/dist/tsHelpers'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 import { FLUSH, PAUSE, PERSIST, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
+import { get, set } from '../utils'
+import { produce } from 'immer'
+
+const nonSerializableFields = [
+  {
+    key: 'icePhotoEditor.image',
+    replacement: '<ImageData>',
+  },
+  {
+    key: 'icePhotoEditor.currentImage',
+    replacement: '<ImageData>',
+  },
+]
 
 const staticReducers = {
   theme: themeReducer,
@@ -22,8 +35,25 @@ const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        ignoredPaths: nonSerializableFields.map(({ key }) => key),
+      },
+      immutableCheck: {
+        ignoredPaths: nonSerializableFields.map(({ key }) => key),
       },
     }),
+  devTools: {
+    stateSanitizer: (state) => {
+      const sanitize = produce<typeof state>((draft) => {
+        nonSerializableFields.forEach(({ key, replacement }) => {
+          if (get(draft, key)) {
+            set(draft as object, key, replacement)
+          }
+        })
+      })
+
+      return sanitize(state)
+    },
+  },
 })
 
 const persistor = persistStore(store)

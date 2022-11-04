@@ -17,6 +17,7 @@ export const dtValues = {
     xl2: '32px',
   },
   gap: {
+    xs: '5px',
     sm: '10px',
     md: '20px',
     lg: '40px',
@@ -36,6 +37,7 @@ export const dtValues = {
     big: 'only screen and (min-width: 1200px)',
   },
   z: {
+    modal: '500',
     menu: '1000',
   },
 } as const

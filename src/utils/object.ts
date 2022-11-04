@@ -62,3 +62,58 @@ export const traverseObj = <T, U, O extends NestedRecord<string, T>>(
     {}
   ) as O
 }
+
+type GetFieldType<O, K> = K extends `${infer Left}.${infer Right}`
+  ? Left extends keyof O
+    ? GetFieldType<Exclude<O[Left], undefined>, Right> | Extract<O[Left], undefined>
+    : undefined
+  : K extends keyof O
+  ? O[K]
+  : undefined
+
+export const get = <O, K extends string, D = GetFieldType<O, K>>(
+  obj: O,
+  key: K,
+  defaultValue?: D
+): GetFieldType<O, K> | D | undefined => {
+  const value = key
+    .split('.')
+    .reduce(
+      (value: Record<string, unknown> | unknown, key) =>
+        isObject(value) ? (value as Record<string, unknown>)[key] : value,
+      obj
+    ) as GetFieldType<O, K>
+
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  return value === undefined ? (defaultValue as D) : value
+}
+
+// Go fuck yourself eslint
+/* eslint-disable @typescript-eslint/no-explicit-any*/
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
+export const set = (obj: object, key: string, value: unknown) => {
+  const keys = key.split('.')
+
+  const targetObj = keys.slice(0, -1).reduce((result: any, key) => {
+    if (isObject(result[key])) return result[key]
+
+    if (!Object.hasOwn(result, key)) {
+      result[key] = {}
+      return result[key]
+    }
+
+    return {}
+  }, obj)
+
+  targetObj[keys.at(-1)!] = value
+}
+
+/* eslint-enable @typescript-eslint/no-explicit-any*/
+/* eslint-enable @typescript-eslint/no-unsafe-argument */
+/* eslint-enable @typescript-eslint/no-unsafe-return */
+/* eslint-enable @typescript-eslint/no-unsafe-member-access */
+/* eslint-enable @typescript-eslint/no-unsafe-assignment */

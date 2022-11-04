@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageManipulators component renders Basic story 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--dt-gap-sm);
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.emotion-3 {
+  font-family: monospace;
+  font-weight: regular;
+  color: var(--dt-theme-primary);
+  margin: 0;
+  border-bottom: 2px solid black;
+  padding: var(--dt-padding-md);
+  background: aliceblue;
+  border-radius: 10px 10px 0 0;
+}
+
+.emotion-5 {
+  display: grid;
+  grid-template-columns: auto auto 4ch;
+  -webkit-column-gap: var(--dt-gap-sm);
+  column-gap: var(--dt-gap-sm);
+  row-gap: var(--dt-gap-xs);
+  padding: var(--dt-padding-sm);
+}
+
+<body>
+  <div>
+    <form>
+      <div
+        class="emotion-0 emotion-1"
+      >
+        <h3
+          class="emotion-2 emotion-3 emotion-4"
+        >
+          Basic adjustments
+        </h3>
+        <div
+          class="emotion-5 emotion-6"
+        >
+          <label
+            class="emotion-7 emotion-8"
+          >
+            Temperature
+          </label>
+          <input
+            class="emotion-9 emotion-10"
+            max="100"
+            min="-100"
+            type="range"
+            value="0"
+          />
+          <input
+            class="emotion-11 emotion-12"
+            type="number"
+            value="0"
+          />
+          <label
+            class="emotion-7 emotion-8"
+          >
+            Tint
+          </label>
+          <input
+            class="emotion-9 emotion-10"
+            max="100"
+            min="-100"
+            type="range"
+            value="0"
+          />
+          <input
+            class="emotion-11 emotion-12"
+            type="number"
+            value="0"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+`;

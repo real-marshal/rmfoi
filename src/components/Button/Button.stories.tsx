@@ -12,3 +12,9 @@ export const Basic = Template.bind({})
 Basic.args = {
   children: 'Button',
 }
+
+export const Secondary = Template.bind({})
+Secondary.args = {
+  children: 'Button',
+  secondary: true,
+}

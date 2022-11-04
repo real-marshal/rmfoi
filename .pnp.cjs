@@ -64,6 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react-hooks", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:8.0.1"],\
             ["@testing-library/user-event", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:14.4.3"],\
             ["@types/jest", "npm:29.0.0"],\
+            ["@types/offscreencanvas", "npm:2019.7.0"],\
             ["@types/react", "npm:18.0.18"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/rimraf", "npm:3.0.2"],\
@@ -91,9 +92,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fork-ts-checker-webpack-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:7.2.13"],\
             ["html-webpack-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:5.5.0"],\
             ["husky", "npm:8.0.1"],\
+            ["immer", "npm:9.0.15"],\
             ["jest", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:29.0.2"],\
             ["jest-environment-jsdom", "npm:29.0.2"],\
             ["jest-extended", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:3.1.0"],\
+            ["localforage", "npm:1.10.0"],\
             ["mini-css-extract-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:2.6.1"],\
             ["modern-normalize", "npm:1.1.0"],\
             ["prettier", "npm:2.7.1"],\
@@ -9027,6 +9030,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/offscreencanvas", [\
+        ["npm:2019.7.0", {\
+          "packageLocation": "../../.yarn/berry/cache/@types-offscreencanvas-npm-2019.7.0-c691495e16-8.zip/node_modules/@types/offscreencanvas/",\
+          "packageDependencies": [\
+            ["@types/offscreencanvas", "npm:2019.7.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/parse-json", [\
         ["npm:4.0.0", {\
           "packageLocation": "../../.yarn/berry/cache/@types-parse-json-npm-4.0.0-298522afa6-8.zip/node_modules/@types/parse-json/",\
@@ -17321,6 +17333,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["immediate", [\
+        ["npm:3.0.6", {\
+          "packageLocation": "../../.yarn/berry/cache/immediate-npm-3.0.6-c27588a2d3-8.zip/node_modules/immediate/",\
+          "packageDependencies": [\
+            ["immediate", "npm:3.0.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["immer", [\
         ["npm:9.0.15", {\
           "packageLocation": "../../.yarn/berry/cache/immer-npm-9.0.15-6c734225db-8.zip/node_modules/immer/",\
@@ -19480,6 +19501,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lie", [\
+        ["npm:3.1.1", {\
+          "packageLocation": "../../.yarn/berry/cache/lie-npm-3.1.1-91350720d9-8.zip/node_modules/lie/",\
+          "packageDependencies": [\
+            ["lie", "npm:3.1.1"],\
+            ["immediate", "npm:3.0.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["lilconfig", [\
         ["npm:2.0.6", {\
           "packageLocation": "../../.yarn/berry/cache/lilconfig-npm-2.0.6-6231346eaf-8.zip/node_modules/lilconfig/",\
@@ -19557,6 +19588,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["big.js", "npm:5.2.2"],\
             ["emojis-list", "npm:3.0.0"],\
             ["json5", "npm:2.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["localforage", [\
+        ["npm:1.10.0", {\
+          "packageLocation": "../../.yarn/berry/cache/localforage-npm-1.10.0-cf9ea9a436-8.zip/node_modules/localforage/",\
+          "packageDependencies": [\
+            ["localforage", "npm:1.10.0"],\
+            ["lie", "npm:3.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -24561,6 +24602,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react-hooks", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:8.0.1"],\
             ["@testing-library/user-event", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:14.4.3"],\
             ["@types/jest", "npm:29.0.0"],\
+            ["@types/offscreencanvas", "npm:2019.7.0"],\
             ["@types/react", "npm:18.0.18"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/rimraf", "npm:3.0.2"],\
@@ -24588,9 +24630,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fork-ts-checker-webpack-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:7.2.13"],\
             ["html-webpack-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:5.5.0"],\
             ["husky", "npm:8.0.1"],\
+            ["immer", "npm:9.0.15"],\
             ["jest", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:29.0.2"],\
             ["jest-environment-jsdom", "npm:29.0.2"],\
             ["jest-extended", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:3.1.0"],\
+            ["localforage", "npm:1.10.0"],\
             ["mini-css-extract-plugin", "virtual:c49aecf404dc1b30247f4abd349015d1b7f81c2826742425d762a5640179b04ea08d999f6db865fc5c995662243e0cc6edb43e7ebdbaa6fb0bc2ba8763eb6325#npm:2.6.1"],\
             ["modern-normalize", "npm:1.1.0"],\
             ["prettier", "npm:2.7.1"],\

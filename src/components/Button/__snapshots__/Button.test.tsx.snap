@@ -7,6 +7,31 @@ exports[`Button component renders Basic story 1`] = `
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  color: var(--dt-theme-background);
+  font-weight: bold;
+}
+
+<body>
+  <div>
+    <button
+      class="emotion-0 emotion-1"
+    >
+      Button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button component renders Secondary story 1`] = `
+.emotion-0 {
+  background: var(--dt-theme-gradientBlue);
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--dt-theme-background);
+  font-weight: bold;
+  background: var(--dt-theme-gradientBlueGreyed);
 }
 
 <body>

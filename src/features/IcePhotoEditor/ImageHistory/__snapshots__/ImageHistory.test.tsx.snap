@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageHistory component renders Basic story 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--dt-gap-md);
+}
+
+.emotion-2 {
+  font-family: monospace;
+  font-weight: regular;
+  color: var(--dt-theme-primary);
+  margin: 0;
+  border-bottom: 4px solid;
+  border-image: var(--dt-theme-gradientBlue) 1;
+  padding-bottom: var(--dt-padding-md);
+}
+
+.emotion-4 {
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <h2
+        class="emotion-2 emotion-3"
+      >
+        History
+      </h2>
+      <ul
+        class="emotion-4 emotion-5"
+      />
+    </div>
+  </div>
+</body>
+`;

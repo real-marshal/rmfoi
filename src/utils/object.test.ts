@@ -1,4 +1,4 @@
-import { flattenObj, isObject, traverseObj } from './object'
+import { flattenObj, isObject, traverseObj, get, set } from './object'
 
 describe('isObject', () => {
   it('should return true if an object is passed', () => {
@@ -137,5 +137,49 @@ describe('traverseObj', () => {
     expect(mockFn).not.toHaveBeenCalled()
 
     expect(input).toEqual(output)
+  })
+})
+
+describe('get', () => {
+  it('should return value from object using key', () => {
+    const obj = {
+      a: {
+        b: {
+          c: 3,
+        },
+      },
+    }
+
+    expect(get(obj, 'a.b.c')).toBe(3)
+  })
+})
+
+describe('set', () => {
+  it('should set value in object using key', () => {
+    const obj = {
+      a: {
+        b: {
+          c: 3,
+        },
+      },
+    }
+
+    set(obj, 'a.b.c', 5)
+
+    expect(obj.a.b.c).toBe(5)
+  })
+
+  it('should work correctly if the value to replace is an object', () => {
+    const obj = {
+      a: {
+        b: {
+          c: 3,
+        },
+      },
+    }
+
+    set(obj, 'a.b', 5)
+
+    expect(obj.a.b).toBe(5)
   })
 })

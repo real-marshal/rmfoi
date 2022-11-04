@@ -8,5 +8,5 @@ export const useEvent = <T extends Function>(fn: T) => {
     fnRef.current = fn
   }, [fn])
 
-  return useCallback((...args: unknown[]): unknown => fnRef.current?.(args), [])
+  return useCallback((...args: unknown[]): unknown => fnRef.current?.(...args), [])
 }

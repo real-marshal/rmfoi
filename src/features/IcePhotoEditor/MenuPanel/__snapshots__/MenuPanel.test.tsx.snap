@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuPanel component renders Basic story 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--dt-gap-md);
+}
+
+.emotion-2 {
+  font-family: monospace;
+  font-weight: regular;
+  color: var(--dt-theme-primary);
+  margin: 0;
+  border-bottom: 4px solid;
+  border-image: var(--dt-theme-gradientBlue) 1;
+  padding-bottom: var(--dt-padding-md);
+}
+
+.emotion-4 {
+  display: none;
+}
+
+.emotion-6 {
+  background: var(--dt-theme-gradientBlue);
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--dt-theme-background);
+  font-weight: bold;
+}
+
+.emotion-8 {
+  background: var(--dt-theme-gradientBlue);
+  padding: var(--dt-padding-md) var(--dt-padding-lg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--dt-theme-background);
+  font-weight: bold;
+  background: var(--dt-theme-gradientBlueGreyed);
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0 emotion-1"
+    >
+      <h2
+        class="emotion-2 emotion-3"
+      >
+        Menu
+      </h2>
+      <input
+        class="emotion-4 emotion-5"
+        type="file"
+      />
+      <button
+        class="emotion-6 emotion-7"
+      >
+        Load Image
+      </button>
+      <button
+        class="emotion-8 emotion-7"
+        disabled=""
+      >
+        Save Image
+      </button>
+    </div>
+  </div>
+</body>
+`;

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component renders Basic story 1`] = `
+.emotion-0 {
+  width: 100vw;
+  height: 100vh;
+  background: #555555aa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+}
+
+.emotion-2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: max(20%, 200px);
+  max-width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: max(20%, 100px);
+  max-height: 90%;
+  border: 1px solid var(--dt-colors-dark);
+  border-radius: 20px;
+  z-index: var(--dt-z-modal);
+  background: var(--dt-colors-light);
+}
+
+<body>
+  <div>
+    <div>
+      <h1>
+        Some background content
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cum placeat quis voluptas repellendus, debitis velit porro expedita est pariatur sunt eaque, iste ratione aut quaerat quas et facilis? Repellat!
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita porro alias, odio, mollitia consequuntur consectetur, sequi quos necessitatibus sit veniam tempore quasi culpa unde facilis. Asperiores eum nemo nobis voluptatum?
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita porro alias, odio, mollitia consequuntur consectetur, sequi quos necessitatibus sit veniam tempore quasi culpa unde facilis. Asperiores eum nemo nobis voluptatum?
+      </p>
+    </div>
+  </div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    />
+  </div>
+</body>
+`;
