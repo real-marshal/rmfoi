@@ -8,15 +8,21 @@ interface AdjustmentInputProps {
   name: AdjustmentKey
   value: string
   label: string
-  minValue?: number | undefined
-  maxValue?: number | undefined
+  minValue: number
+  maxValue: number
 }
 
-const AdjustmentLabel = styled.label``
+const AdjustmentLabel = styled.label`
+  font-family: monospace;
+`
 
-const SliderInput = styled.input``
+const SliderInput = styled.input`
+  width: 100%;
+`
 
 const TextInput = styled.input``
+
+const steps = 200 as const
 
 const AdjustmentInput = ({ name, value, label, minValue, maxValue }: AdjustmentInputProps) => {
   const dispatch = useCurrentDispatch()
@@ -31,11 +37,20 @@ const AdjustmentInput = ({ name, value, label, minValue, maxValue }: AdjustmentI
     )
   }
 
+  const step = (maxValue - minValue) / steps
+
   return (
     <>
       <AdjustmentLabel>{label}</AdjustmentLabel>
-      <SliderInput type='range' value={value} onChange={onChange} min={minValue} max={maxValue} />
-      <TextInput type='number' value={value} onChange={onChange} />
+      <SliderInput
+        type='range'
+        value={value}
+        onChange={onChange}
+        min={minValue}
+        max={maxValue}
+        step={step}
+      />
+      <TextInput type='number' value={value} onChange={onChange} min={minValue} max={maxValue} />
     </>
   )
 }

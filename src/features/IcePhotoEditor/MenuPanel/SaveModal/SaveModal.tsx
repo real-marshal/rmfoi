@@ -22,7 +22,9 @@ const FilenameContainer = styled.div`
   gap: ${dt.gap.sm};
   align-items: center;
 `
-const FilenameLabel = styled.label``
+const FilenameLabel = styled.label`
+  color: ${dt.theme.primary};
+`
 const FilenameInput = styled.input``
 
 const ButtonsContainer = styled.div`

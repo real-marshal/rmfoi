@@ -2,12 +2,21 @@ import { useRoutes } from 'react-router-dom'
 import { Home, About, Projects, Articles } from '@/pages'
 import { lazy } from 'react'
 
-const LazyEmojiSlotMachine = lazy(
+const LazyEmojiSlotMachinePage = lazy(
   () =>
     import(
       /* webpackChunkName: 'emoji-slot-machine' */
       /* webpackPrefetch: true */
       '@/pages/Projects/pages/EmojiSlotMachinePage'
+    )
+)
+
+const LazyIcePhotoEditorPage = lazy(
+  () =>
+    import(
+      /* webpackChunkName: 'ice-photo-editor' */
+      /* webpackPrefetch: true */
+      '@/pages/Projects/pages/IcePhotoEditorPage'
     )
 )
 
@@ -30,7 +39,11 @@ export const Routes = () =>
             },
             {
               path: 'emoji-slot-machine',
-              element: <LazyEmojiSlotMachine />,
+              element: <LazyEmojiSlotMachinePage />,
+            },
+            {
+              path: 'ice-photo-editor',
+              element: <LazyIcePhotoEditorPage />,
             },
           ],
         },

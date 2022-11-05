@@ -79,6 +79,9 @@ const { actions, reducer } = createSlice({
       state.historyStack.push(action.payload)
       state.currentHistoryPointer = state.historyStack.length - 1
     },
+    removeHistoryElements: (state, action: PayloadAction<number>) => {
+      state.historyStack = state.historyStack.slice(0, action.payload)
+    },
     updateLastHistoryElement: (state, action: PayloadAction<HistoryElement>) => {
       const { adjustment: lastAdjustment } = state.historyStack.at(-1) ?? {}
 
@@ -133,6 +136,12 @@ THUNKS
 export const updateAdjustments =
   (adjustment: AdjustmentChange): CurrentThunk =>
   (dispatch, getState) => {
+    const { historyStack: originalHistoryStack, currentHistoryPointer } = getState()[NAME]
+
+    if (currentHistoryPointer !== originalHistoryStack.length - 1) {
+      dispatch(actions.removeHistoryElements(currentHistoryPointer + 1))
+    }
+
     const { historyStack } = getState()[NAME]
 
     const { adjustment: lastAdjustment } = historyStack.at(-1) ?? {}

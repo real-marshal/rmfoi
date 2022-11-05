@@ -17,16 +17,17 @@ const ManipulatorsGroup = styled.div`
 const StyledHeading = styled(Heading)`
   border-bottom: 2px solid black;
   padding: ${dt.padding.md};
-  background: aliceblue;
+  background: ${dt.theme.background};
   border-radius: 10px 10px 0 0;
 `
 
 const AdjustmentsContainer = styled.div`
   display: grid;
-  grid-template-columns: auto auto 4ch;
+  grid-template-columns: min-content auto 5ch;
   column-gap: ${dt.gap.sm};
   row-gap: ${dt.gap.xs};
   padding: ${dt.padding.sm};
+  align-items: center;
 `
 
 const ImageManipulators = () => {

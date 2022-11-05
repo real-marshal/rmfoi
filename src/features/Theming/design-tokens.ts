@@ -35,6 +35,7 @@ export const dtValues = {
   },
   mq: {
     big: 'only screen and (min-width: 1200px)',
+    bigger: 'only screen and (min-width: 1700px)',
   },
   z: {
     modal: '500',

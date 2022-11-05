@@ -26,10 +26,10 @@ const ModalContent = styled.div`
   height: fit-content;
   min-height: max(20%, 100px);
   max-height: 90%;
-  border: 1px solid ${dt.colors.dark};
+  border: 1px solid ${dt.theme.primary};
   border-radius: 20px;
   z-index: ${dt.z.modal};
-  background: ${dt.colors.light};
+  background: ${dt.theme.background};
 `
 
 const Modal = ({ children, isOpen }: ModalProps) =>

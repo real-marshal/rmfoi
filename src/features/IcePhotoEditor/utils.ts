@@ -1,5 +1,5 @@
 export const sanitizeNumberInput = (value: string): number => {
-  const numberOrNaN = Number.parseInt(value, 10)
+  const numberOrNaN = Number.parseFloat(value)
 
   return Number.isNaN(numberOrNaN) ? 0 : numberOrNaN
 }

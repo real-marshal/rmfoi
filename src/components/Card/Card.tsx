@@ -6,8 +6,8 @@ import { Heading } from '../Heading'
 interface CardProps {
   name: string
   description: string
-  media: 'image' | 'video'
-  src: string
+  media?: 'image' | 'video'
+  src?: string
   link?: string
 }
 
@@ -21,7 +21,7 @@ const Container = styled.div`
   border: 3px solid ${dt.theme.primary};
   border-radius: 10px;
 
-  & > :not(img, a) {
+  & > :not(a) {
     padding: ${dt.padding.lg};
   }
 `

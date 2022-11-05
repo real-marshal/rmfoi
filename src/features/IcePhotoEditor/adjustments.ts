@@ -1,8 +1,10 @@
-import { addRGBA } from './color-utils'
+import { addRGBA, multiplyRGBA } from './color-utils'
 
 export interface AdjustmentsState {
   temperature?: number
   tint?: number
+  offset?: number
+  multiply?: number
 }
 
 export type AdjustmentKey = keyof AdjustmentsState
@@ -11,8 +13,8 @@ interface Adjustment {
   name: AdjustmentKey
   label: string
   initialValue: number
-  minValue?: number
-  maxValue?: number
+  minValue: number
+  maxValue: number
 }
 
 type AdjustmentFunction = (
@@ -35,6 +37,20 @@ export const adjustments: Adjustment[] = [
     minValue: -100,
     maxValue: 100,
   },
+  {
+    name: 'offset',
+    label: 'Offset',
+    initialValue: 0,
+    minValue: -100,
+    maxValue: 100,
+  },
+  {
+    name: 'multiply',
+    label: 'Multiply',
+    initialValue: 1,
+    minValue: 0,
+    maxValue: 2,
+  },
 ]
 
 export const adjustmentsMap = adjustments.reduce(
@@ -48,8 +64,23 @@ const temperature: AdjustmentFunction = (imageData, { temperature }) =>
 const tint: AdjustmentFunction = (imageData, { tint }) =>
   tint ? addRGBA(imageData, { G: -tint }) : imageData
 
+const offset: AdjustmentFunction = (imageData, { offset }) =>
+  offset ? addRGBA(imageData, { R: offset, G: offset, B: offset }) : imageData
+
+const multiply: AdjustmentFunction = (imageData, { multiply }) =>
+  multiply !== undefined && multiply !== 1
+    ? multiplyRGBA(imageData, { R: multiply, G: multiply, B: multiply })
+    : imageData
+
 // Adjustments should be applied in the order they are defined in the following array
-const adjustmentFunctions = [temperature, tint]
+const adjustmentFunctions = [temperature, tint, offset, multiply]
+
+const adjustmentFunctionsMap: Record<AdjustmentKey, AdjustmentFunction> = {
+  temperature,
+  tint,
+  offset,
+  multiply,
+}
 
 export const applyAdjustments = (
   imageData: Uint8ClampedArray,
@@ -59,11 +90,6 @@ export const applyAdjustments = (
     (result, adjustmentFunction) => adjustmentFunction(result, adjustmentsState),
     imageData
   )
-
-const adjustmentFunctionsMap: Record<AdjustmentKey, AdjustmentFunction> = {
-  temperature,
-  tint,
-}
 
 export const applyAdjustment = (
   imageData: Uint8ClampedArray,

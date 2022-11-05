@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdjustmentInput component renders Basic story 1`] = `
+.emotion-0 {
+  font-family: monospace;
+}
+
+.emotion-2 {
+  width: 100%;
+}
+
 <body>
   <div>
     <label
@@ -8,6 +16,7 @@ exports[`AdjustmentInput component renders Basic story 1`] = `
     />
     <input
       class="emotion-2 emotion-3"
+      step="NaN"
       type="range"
       value=""
     />

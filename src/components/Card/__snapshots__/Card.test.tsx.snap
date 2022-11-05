@@ -19,7 +19,7 @@ exports[`Card component renders Basic story 1`] = `
   border-radius: 10px;
 }
 
-.emotion-0>:not(img, a) {
+.emotion-0>:not(a) {
   padding: var(--dt-padding-lg);
 }
 

@@ -1,8 +1,7 @@
 import styled from '@emotion/styled'
 import { useRef } from 'react'
-import { dt } from '../Theming'
+import { dt, dtValues } from '@/features/Theming'
 import { colors } from './colors'
-import { Histogram } from './Histogram'
 import { ImageHistory } from './ImageHistory'
 import { MenuPanel } from './MenuPanel'
 import { ImageManipulators } from './ImageManipulators'
@@ -15,10 +14,15 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 15% auto 20%;
+  grid-template-rows: auto 50vh auto;
   background: ${colors.darkGray};
-  border: 2px solid black;
+  border: 2px solid ${dt.theme.primary};
   border-radius: 10px;
+
+  @media ${dtValues.mq.bigger} {
+    grid-template-columns: 20% auto 23%;
+    grid-template-rows: none;
+  }
 `
 
 const LeftSidebar = styled.div`
@@ -28,6 +32,11 @@ const LeftSidebar = styled.div`
   background: #888;
   padding: ${dt.padding.lg};
   gap: ${dt.gap.lg};
+  border-radius: 10px 10px 0 0;
+
+  @media ${dtValues.mq.bigger} {
+    border-radius: 10px 0 0 10px;
+  }
 `
 
 const CanvasContainer = styled.div`
@@ -48,6 +57,11 @@ const RightSidebar = styled.div`
   padding: ${dt.padding.lg};
   gap: ${dt.gap.lg};
   background: #888;
+  border-radius: 0 0 10px 10px;
+
+  @media ${dtValues.mq.bigger} {
+    border-radius: 0 10px 10px 0;
+  }
 `
 
 const IcePhotoEditor = () => {
@@ -79,7 +93,6 @@ const IcePhotoEditor = () => {
         />
       </CanvasContainer>
       <RightSidebar>
-        <Histogram />
         <ImageManipulators />
       </RightSidebar>
     </Container>

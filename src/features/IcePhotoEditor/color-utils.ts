@@ -76,3 +76,10 @@ export const getTemparatureRGB = (temp: number): RGB => {
         : clampToBitDepth(138.517_731_223_1 * Math.log(workingTemp - 10) - 305.044_792_730_7),
   }
 }
+
+export const linearize = (image: Uint8ClampedArray, encodedGamma = 2.2) =>
+  iterateRGBA(image, ({ R, G, B }) => ({
+    R: R ** (1 / encodedGamma),
+    G: G ** (1 / encodedGamma),
+    B: B ** (1 / encodedGamma),
+  }))

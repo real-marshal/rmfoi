@@ -22,17 +22,29 @@ exports[`ImageManipulators component renders Basic story 1`] = `
   margin: 0;
   border-bottom: 2px solid black;
   padding: var(--dt-padding-md);
-  background: aliceblue;
+  background: var(--dt-theme-background);
   border-radius: 10px 10px 0 0;
 }
 
 .emotion-5 {
   display: grid;
-  grid-template-columns: auto auto 4ch;
+  grid-template-columns: min-content auto 5ch;
   -webkit-column-gap: var(--dt-gap-sm);
   column-gap: var(--dt-gap-sm);
   row-gap: var(--dt-gap-xs);
   padding: var(--dt-padding-sm);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-7 {
+  font-family: monospace;
+}
+
+.emotion-9 {
+  width: 100%;
 }
 
 <body>
@@ -58,11 +70,14 @@ exports[`ImageManipulators component renders Basic story 1`] = `
             class="emotion-9 emotion-10"
             max="100"
             min="-100"
+            step="1"
             type="range"
             value="0"
           />
           <input
             class="emotion-11 emotion-12"
+            max="100"
+            min="-100"
             type="number"
             value="0"
           />
@@ -75,13 +90,56 @@ exports[`ImageManipulators component renders Basic story 1`] = `
             class="emotion-9 emotion-10"
             max="100"
             min="-100"
+            step="1"
             type="range"
             value="0"
           />
           <input
             class="emotion-11 emotion-12"
+            max="100"
+            min="-100"
             type="number"
             value="0"
+          />
+          <label
+            class="emotion-7 emotion-8"
+          >
+            Offset
+          </label>
+          <input
+            class="emotion-9 emotion-10"
+            max="100"
+            min="-100"
+            step="1"
+            type="range"
+            value="0"
+          />
+          <input
+            class="emotion-11 emotion-12"
+            max="100"
+            min="-100"
+            type="number"
+            value="0"
+          />
+          <label
+            class="emotion-7 emotion-8"
+          >
+            Multiply
+          </label>
+          <input
+            class="emotion-9 emotion-10"
+            max="2"
+            min="0"
+            step="0.01"
+            type="range"
+            value="1"
+          />
+          <input
+            class="emotion-11 emotion-12"
+            max="2"
+            min="0"
+            type="number"
+            value="1"
           />
         </div>
       </div>
