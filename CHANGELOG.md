@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/real-marshal/rmfoi/compare/v1.0.2...v1.1.0) (2022-11-05)
+
+
+### Features
+
+* :sparkles: add ice photo editor page ([41720c1](https://github.com/real-marshal/rmfoi/commit/41720c1b9307ad275b5f774933bd14e8c16c03f9))
+* :sparkles: add ice photo editor story ([979c346](https://github.com/real-marshal/rmfoi/commit/979c3465f40be31ffdec1dde3097110eaafadc2b))
+
 ## [1.0.2](https://github.com/real-marshal/rmfoi/compare/v1.0.1...v1.0.2) (2022-10-03)
 
 

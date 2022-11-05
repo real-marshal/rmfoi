@@ -1,6 +1,6 @@
 {
   "name": "rmfoi",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Real_Marshal",
   "browserslist": "last 2 years",
   "main": "src/index.tsx",
